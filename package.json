@@ -4,6 +4,7 @@
   "description": "node express server, bootstrap ui, crud",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/qchen-dev/2095/issues"
   },
-  "homepage": "https://github.com/qchen-dev/2095#readme"
+  "homepage": "https://github.com/qchen-dev/2095#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }
