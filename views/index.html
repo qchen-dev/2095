@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>2095 Assignment</title>
   </head>
 
@@ -15,30 +16,6 @@
       </div>
     </div>
   </body>
+
+  <%- include('./footer') %>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/bootstrap.min.css" />
-    <title>2095 Assignment</title>
-  </head>
-
-  <body>
-    <div class="container">
-      <%- include('./navbar') %>
-      <div class="d-flex justify-content-center">
-        <% if (currentPath === '/123/abc' ) { %>
-        <h1>Home Page</h1>
-        <% } else if (currentPath === '/add-driver' ) { %> <%-
-        include('./add-driver') %> <% } else if (currentPath === '/list-driver'
-        ) { %> <%- include('./list-driver') %> <% } else if (currentPath ===
-        '/delete-driver' ) { %> <%- include('./delete-driver') %> <% } else { %>
-        <p>This is the default content.</p>
-        <% } %>
-      </div>
-    </div>
-  </body>
-</html> -->

@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles.css" />
+
     <title>2095 Assignment</title>
   </head>
 
@@ -11,8 +13,79 @@
     <div class="container">
       <%- include('./navbar') %>
       <div class="d-flex justify-content-center">
-        <h1>add package</h1>
+        <form
+          class="shadow-lg rounded m-1 p-4 w-50"
+          method="post"
+          action="<%= url %>/driver"
+        >
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="title"
+              name="title"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="description">Description</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="description"
+              name="description"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="weight">Weight</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="weight"
+              name="weight"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="destination">Destination</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="destination"
+              name="destination"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="driver">Driver ID</label>
+            <select class="form-select mt-1" id="driver" name="driver">
+              <option selected disabled>Select Driver</option>
+              <% for (let i = 0; i < drivers.length; i++) { %>
+              <option value="<%= drivers[i].name %>" class="text-capitalize">
+                <%= drivers[i].name %>
+              </option>
+              <% } %>
+            </select>
+          </div>
+
+          <div class="form-group form-check mt-3">
+            <input
+              type="checkbox"
+              class="form-check-input mt-1"
+              id="isActive"
+              name="active"
+            />
+            <label class="form-check-label" for="isActive">Is Active ?</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">
+            Submit To Add
+          </button>
+        </form>
       </div>
     </div>
   </body>
+
+  <%- include('./footer') %>
 </html>
