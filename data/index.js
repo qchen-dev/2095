@@ -10,7 +10,38 @@ const links = [
   "delete package",
 ];
 
+const departments = ["Food", "Furniture", "Electronic"];
+
+const driverTableHeader = [
+  "#Id",
+  "Name",
+  "Department",
+  "Licence",
+  "Is Active?",
+  "Created At",
+  "Delete?",
+];
+
+const packageTableHeader = [
+  "#Id",
+  "Title",
+  "Weight",
+  "Destination",
+  "Description",
+  "Is Allocated",
+  "Driver Id",
+  "Created At",
+  "Delete?",
+];
+
 const drivers = [];
 const packages = [];
 
-module.exports = { url, links, drivers, packages };
+module.exports = {
+  url,
+  links,
+  departments,
+  drivers,
+  packages,
+  driverTableHeader,
+};
