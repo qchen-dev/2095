@@ -1,0 +1,16 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-info nav justify-content-center my-5"
+>
+  <ul class="nav">
+    <% for (let i = 0; i < links.length; i++) { %>
+    <li class="nav-item">
+      <a
+        class="nav-link text-dark text-capitalize font-weight-bold"
+        href="<%= url %><%= links[i].toLowerCase() === 'home' ? '' : '/' + links[i].toLowerCase().split(' ').join('-') %>"
+      >
+        <%= links[i] %>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</nav>
