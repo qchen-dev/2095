@@ -44,4 +44,5 @@ module.exports = {
   drivers,
   packages,
   driverTableHeader,
+  packageTableHeader,
 };
