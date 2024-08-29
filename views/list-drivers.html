@@ -11,7 +11,34 @@
     <div class="container">
       <%- include('./navbar') %>
       <div class="d-flex justify-content-center">
-        <h1>list drivers</h1>
+        <table class="table mx-2 table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <% for (let i = 0; i < driverTableHeader.length; i++) { %>
+              <th scope="col"><%= driverTableHeader[i] %></th>
+              <% } %>
+            </tr>
+          </thead>
+          <tbody>
+            <% for (let i = 0; i < drivers.length; i++) { %>
+            <tr>
+              <th scope="row"><%= drivers[i].id %></th>
+              <th><%= drivers[i].name %></th>
+              <th><%= drivers[i].department %></th>
+              <th><%= drivers[i].licence %></th>
+              <th><%= drivers[i].isActive %></th>
+              <th><%= drivers[i].createdAt %></th>
+              <th>
+                <a
+                  href="delete-driver?id=<%= drivers[i].id %>"
+                  class="btn btn-danger"
+                  >Delete</a
+                >
+              </th>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>

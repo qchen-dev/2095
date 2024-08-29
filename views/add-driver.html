@@ -11,7 +11,56 @@
     <div class="container">
       <%- include('./navbar') %>
       <div class="d-flex justify-content-center">
-        <h1>add driver page</h1>
+        <form
+          class="shadow-lg rounded m-2 p-5 w-50"
+          method="post"
+          action="<%= url %>/driver"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="name"
+              name="name"
+            />
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="department">Department</label>
+            <select class="form-select mt-1" id="department" name="department">
+              <option selected disabled>Select Department</option>
+              <% for (let i = 0; i < departments.length; i++) { %>
+              <option value="<%= departments[i] %>" class="text-capitalize">
+                <%= departments[i] %>
+              </option>
+              <% } %>
+            </select>
+          </div>
+
+          <div class="form-group mt-3">
+            <label for="licence">Licence</label>
+            <input
+              type="text"
+              class="form-control mt-1"
+              id="licence"
+              name="licence"
+            />
+          </div>
+
+          <div class="form-group form-check mt-3">
+            <input
+              type="checkbox"
+              class="form-check-input mt-1"
+              id="isActive"
+              name="active"
+            />
+            <label class="form-check-label" for="isActive">Is Active ?</label>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">
+            Submit To Add
+          </button>
+        </form>
       </div>
     </div>
   </body>
