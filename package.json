@@ -1,0 +1,19 @@
+{
+  "name": "2095-assignment",
+  "version": "1.0.0",
+  "description": "node express server, bootstrap ui, crud",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qchen-dev/2095.git"
+  },
+  "author": "Q Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qchen-dev/2095/issues"
+  },
+  "homepage": "https://github.com/qchen-dev/2095#readme"
+}
